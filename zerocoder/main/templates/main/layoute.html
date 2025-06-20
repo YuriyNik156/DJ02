@@ -12,10 +12,22 @@
 
     {% endblock %}
 </head>
-<body>
-{% include 'main/nav.html' %}
-    {% block content %}
 
-    {% endblock %}
+<body>
+    <aside>
+        <img src="{% static 'main/image/Zerocoder.jpg' %}" alt="Логотип Зерокодер" width="150">
+        <span>ZeroDjango</span>
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Второстепенная</a></li>
+        </ul>
+    </aside>
+    <main>
+        <div class="container">
+            {% block content %}
+            <!-- Контент подгружается сюда -->
+            {% endblock %}
+        </div>
+    </main>
 </body>
 </html>
